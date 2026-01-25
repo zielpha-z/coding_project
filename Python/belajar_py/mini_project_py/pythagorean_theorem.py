@@ -2,12 +2,23 @@
 
 
 #*Mini prject, pythagoras teorem
-
+import sys
 import math
+import time
 
 base = 0
 hypotenuse = 0
 height = 0
+
+def print(text, time_delay=0.1, tenses_pause=1.8):
+    alpha = len(text)
+    for wordd in text:
+        sys.stdout.write(f"{wordd}")
+        sys.stdout.flush()
+        time.sleep(time_delay)
+    time.sleep(tenses_pause)
+    sys.stdout.write("\n")
+   
 
 def base_func(height, hypotenuse, base, answer):
     if answer == "base":

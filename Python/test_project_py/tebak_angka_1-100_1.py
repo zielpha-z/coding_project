@@ -1,6 +1,6 @@
 
-#Date (02/01/2026)
-#Membuat permainan tebak tebakan angka tapi yang jawab kita
+# Date (02/01/2026)
+# Membuat permainan tebak tebakan angka tapi yang jawab kita
 
 import random
 angka = random.randint(1,100)
@@ -50,7 +50,7 @@ while True:
             print(f"Kamu menebaknya dengan {percobaan} kali percobaan dari {kesempatan2} kesempatan")
             akurasi = (1 - kesalahan / kesempatan2) * 100
             round(akurasi, 2) 
-            print(f"Dengan akurasi jawabanmu sebesarrr {akurasi}%")
+            print(f"Dengan akurasi jawabanmu sebesar {akurasi}%")
         elif jawab >=  1 and jawab <= 100:
             if angka > jawab:
                 komplen = "Angkanya lebih besar dari itu..."
@@ -61,10 +61,12 @@ while True:
             percobaan += 1
             break
         else:
-            print("Jawaban tidak valid, coba ulangi lagi")
+            print("Jawaban tidak bolwh dibawah 1 dan diatas 100, coba ulangi lagi")
+            komplen = ""
         
     else:
-         print("Jawaban harus angka coi, coba ulangi lagi")
+         print("Jawaban harus angka murni, coba ulangi lagi")
+         komplen = ""
 
 
 while True:
@@ -95,9 +97,11 @@ while True:
                         kesempatan -= 1
                         break
                     else:
-                        print("Jawaban tidak valid, coba ulangi lagi")
+                        print("Jawaban tidak boleh dibawah 1 dan diatas 100, coba ulangi lagi")
+                        komplen = ""
                 else:
-                    print("Jawabannya harus angka kocak, coba ulangi lagi!")
+                    print("Jawabannya harus angka murni, coba ulangi lagi!")
+                    komplen = ""
         else:
             print(f"Maaf, kamu gagal menebaknya dengan {kesempatan2} kesempatan")
             print(f"Sebenarnya, angka yang ku pilih adakah {angka}")
