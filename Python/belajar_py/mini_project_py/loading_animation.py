@@ -1,8 +1,6 @@
 # Dtae (18/1/26)
 
-
 import winsound
-
 import math
 import time
 import sys
@@ -32,6 +30,7 @@ def memuat(teks="Loading", pengulangan=2, delay1=0.2, delay2=0.2):
             sys.stdout.flush()
             time.sleep(delay2)
     sys.stdout.write("\r" + " " * (len(teks) + 1))
+    sys.stdout.flush()
     sys.stdout.write("\r")
 
 
